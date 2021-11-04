@@ -44,9 +44,8 @@ class SortedList {
     if (!this.length) {
       throw new Error('EmptySortedList');
     }
-    const avg = this.items.reduce((acc, next) => acc+=next)
-    const result = avg/this.length
-    return result
+    const avg = this.sum()/this.length
+    return avg
   }
 }
 
